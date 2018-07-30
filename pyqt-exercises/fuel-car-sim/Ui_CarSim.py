@@ -1,0 +1,110 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'Ui_CarSim.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(251, 338)
+        MainWindow.setMinimumSize(QtCore.QSize(251, 338))
+        MainWindow.setMaximumSize(QtCore.QSize(251, 338))
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.fuel_level = QtWidgets.QProgressBar(self.centralwidget)
+        self.fuel_level.setGeometry(QtCore.QRect(221, 9, 21, 271))
+        self.fuel_level.setProperty("value", 0)
+        self.fuel_level.setAlignment(QtCore.Qt.AlignCenter)
+        self.fuel_level.setOrientation(QtCore.Qt.Vertical)
+        self.fuel_level.setObjectName("fuel_level")
+        self.title_label = QtWidgets.QLabel(self.centralwidget)
+        self.title_label.setGeometry(QtCore.QRect(9, 9, 201, 51))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.title_label.setFont(font)
+        self.title_label.setAutoFillBackground(False)
+        self.title_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.title_label.setObjectName("title_label")
+        self.amount = QtWidgets.QLineEdit(self.centralwidget)
+        self.amount.setGeometry(QtCore.QRect(90, 200, 125, 41))
+        self.amount.setAlignment(QtCore.Qt.AlignCenter)
+        self.amount.setObjectName("amount")
+        self.refuel = QtWidgets.QPushButton(self.centralwidget)
+        self.refuel.setGeometry(QtCore.QRect(9, 200, 75, 41))
+        self.refuel.setObjectName("refuel")
+        self.run = QtWidgets.QPushButton(self.centralwidget)
+        self.run.setGeometry(QtCore.QRect(9, 247, 75, 41))
+        self.run.setObjectName("run")
+        self.distance = QtWidgets.QLineEdit(self.centralwidget)
+        self.distance.setGeometry(QtCore.QRect(90, 245, 125, 41))
+        self.distance.setAlignment(QtCore.Qt.AlignCenter)
+        self.distance.setObjectName("distance")
+        self.start_engine = QtWidgets.QPushButton(self.centralwidget)
+        self.start_engine.setGeometry(QtCore.QRect(9, 150, 101, 41))
+        self.start_engine.setObjectName("start_engine")
+        self.stop_engine = QtWidgets.QPushButton(self.centralwidget)
+        self.stop_engine.setGeometry(QtCore.QRect(114, 150, 101, 41))
+        self.stop_engine.setObjectName("stop_engine")
+        self.brand_label = QtWidgets.QLabel(self.centralwidget)
+        self.brand_label.setGeometry(QtCore.QRect(9, 75, 201, 31))
+        self.brand_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.brand_label.setObjectName("brand_label")
+        self.model_label = QtWidgets.QLabel(self.centralwidget)
+        self.model_label.setGeometry(QtCore.QRect(9, 110, 201, 31))
+        self.model_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.model_label.setObjectName("model_label")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 251, 21))
+        self.menubar.setObjectName("menubar")
+        self.menuFile = QtWidgets.QMenu(self.menubar)
+        self.menuFile.setObjectName("menuFile")
+        MainWindow.setMenuBar(self.menubar)
+        self.actionExit = QtWidgets.QAction(MainWindow)
+        self.actionExit.setObjectName("actionExit")
+        self.actionAbout = QtWidgets.QAction(MainWindow)
+        self.actionAbout.setObjectName("actionAbout")
+        self.menuFile.addAction(self.actionAbout)
+        self.menuFile.addSeparator()
+        self.menuFile.addAction(self.actionExit)
+        self.menubar.addAction(self.menuFile.menuAction())
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "Fuel Car Simulator"))
+        self.title_label.setText(_translate("MainWindow", "Fuel Car Simulator"))
+        self.amount.setPlaceholderText(_translate("MainWindow", "Amount"))
+        self.refuel.setText(_translate("MainWindow", "Refuel"))
+        self.run.setText(_translate("MainWindow", "Run"))
+        self.distance.setPlaceholderText(_translate("MainWindow", "Distance"))
+        self.start_engine.setText(_translate("MainWindow", "Start Engine"))
+        self.stop_engine.setText(_translate("MainWindow", "Stop Engine"))
+        self.brand_label.setText(_translate("MainWindow", "<b>Brand Name:</b> Mitsubishi"))
+        self.model_label.setText(_translate("MainWindow", "<b>Model:</b> ASX 2011"))
+        self.menuFile.setTitle(_translate("MainWindow", "File"))
+        self.actionExit.setText(_translate("MainWindow", "Exit"))
+        self.actionAbout.setText(_translate("MainWindow", "About"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+
